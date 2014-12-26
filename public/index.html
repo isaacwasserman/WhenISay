@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta name='viewport' content='initial-scale=1.0, user-scalable=no, maximum-scale=1' media='(device-height: 568px)'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://raritea.com/raritea/fonts.css"/>
+    <link rel="stylesheet" href="stylesheet.css"/>
+    <script src="adjectivelist.js"></script>
+    <script src="nounlist.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" media="(max-width: 1000px)" href="smallmedia.css" />
+    <link rel="stylesheet" media="(max-width: 540px)" href="smallermedia.css" />
+    <link rel="stylesheet" href="mobileprofile.css"/>
+  </head>
+  <body onload="init();">
+    <div id="main">
+    <div id="text">
+      <h1 id="line1" class="line"><span class="word" id="when">When </span><span id="i">I </span><span id="say1">say</span></h1>
+      <input class="varline" id="varline1" type="text" onblur="setquery();" />
+      <h1 id="line2" class="line">you say</h1>
+      <input class="varline" id="varline2" type="text" onblur="setquery();" />
+    </div>
+    <div id="buttons">
+      <div id="read" class="bluebutton" onclick="read();"><strong>Read</strong></div>
+      <div id="share" class="bluebutton" onclick="copyurl();"><img id="shareicon" src="share.svg"/><!--<input type="text" id="copyablelink" readonly/>--></div>
+    </div>
+    <div id="sidebar">
+      <h1 id="sidebarheading">U Said It</h1>
+      <h6 id="sidebarsubheading">by <a id="raritealink" href="http://raritea.com">Raritea</a></h6>
+      <div>
+        <p><a id="raritealink" href="http://raritea.com/raritea/pages/Photos.html" style="text-decoration:none;">@i_wasserman</a><br>#raritea<br></p>
+      </div>
+      <img id="profile" src="Profile.jpg"/>
+    </div>
+    
+    <div id="mobileopenprofile" onclick="openprofile();">USaidit by Raritea</div>
+    </div>
+    <div id="mobileprofile">
+      <h1 id="sidebarheading2">U Said It</h1>
+      <h6 id="sidebarsubheading2">by <a id="raritealink" href="http://raritea.com">Raritea</a></h6>
+      <div>
+        <a id="raritealink2" href="http://raritea.com/raritea/pages/Photos.html">@i_wasserman</a><br><a id="raritealink2">#raritea</a><br>
+      </div>
+      <img id="profile2" src="Profile.jpg"/>
+      <h1 id="closeprofile" onclick="closeprofile();">x</h1>
+    </div>
+    
+    <audio id="isay" src="isay.mp3" onended="sayad();"></audio>
+    <audio id="yousay" src="yousay.mp3" onended="saynoun();"></audio>
+    <audio id="music" src="lmcmt.mp3" loop></audio>
+  </body>
+</html>

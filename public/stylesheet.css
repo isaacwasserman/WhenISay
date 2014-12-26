@@ -1,0 +1,167 @@
+body {
+  overflow-x: hidden;
+  }
+
+#text {
+  display: block;
+}
+
+h1 {
+  position: relative;
+  top: 20px;
+  line-height: 70px;
+  }
+
+.line {
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 100px;
+  color: #b4b4b4;
+  transition: font-size .5s;
+  }
+
+
+.varline {
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 100px;
+  color: #1DAEFF;
+  background-color: transparent;
+  transition: font-size .5s;
+  padding: 0px;
+  margin: 0px;
+  }
+
+#varline2 {
+  padding-bottom: 50px;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 40%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  text-align: center;
+  transition: width .2s;
+  }
+
+#sidebarheading {
+  color: white;
+  font-family: BebasNeue;
+  font-weight: 100;
+  font-size: 150px;
+  line-height: 50px;
+  top: -10px;
+  }
+#sidebarsubheading {
+  color: white;
+  font-family: BebasNeue;
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 20px;
+  position: relative;
+  top: -60px;
+  left: 10px;
+  }
+
+#raritealink {
+  color: white;
+  text-decoration: none;
+  }
+#raritealink:hover {
+  color: #1DAEFF;
+  }
+
+#read {
+  height: 110px;
+  width: 270px;
+  border-radius: 10px;
+  background-color: #058dd8;
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  font-size: 90px;
+  position: relative;
+  top: 20px;
+  cursor: pointer;
+  float: left;
+  }
+
+
+
+#read:hover {
+  opacity: .8;
+  }
+
+*:focus {
+    outline: 0;
+}
+
+textarea, input {
+  border-style: hidden;
+}
+
+p {
+  color: white;
+  font-family: BebasNeue;
+  font-weight: 100;
+  font-size: 40px;
+  position: relative;
+  left: 10px;
+  top: -100px;
+  line-height: 50px;
+}
+
+#profile {
+  width: 90%;
+  max-width: 350px;
+  border-radius: 100%;
+  position: relative;
+  top: -80px;
+  
+}
+
+#sidebarheading, #sidebarsubheading, p {
+  transition: font-size .5s;
+}
+
+#mobileopenprofile {
+  display:none;
+}
+
+#mobileprofile {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+  text-align: center;
+}
+
+.bluebutton {
+  float: left;
+}
+
+#share {
+  height: 110px;
+  width: 110px;
+  background-color: #058dd8;
+  position: relative;
+  top: 20px;
+  border-radius: 10px;
+  left: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#shareicon {
+  width: 80%;
+  position: relative;
+  top: 5px;
+}

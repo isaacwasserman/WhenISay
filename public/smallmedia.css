@@ -1,0 +1,35 @@
+#sidebar {
+  transition: width .5s;
+  width:0px;
+  z-index: -3;
+}
+
+#sidebarheading, #sidebarsubheading, p {
+  font-size: 0px;
+  transition: font-size .5s;
+}
+
+#mobileopenprofile {
+  display:none;
+  position: relative;
+  bottom: 0px;
+  padding-top: 80px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  color: #1DAEFF;
+/*  background-color: rgba(0,0,0,0.5);*/
+  font-family: sans-serif;
+  text-align: center;
+  cursor: pointer;
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+#mobileopenprofile:hover {
+  color: #1DAEFF;
+}
+
+.line, .varline {
+  float: left;
+}
