@@ -37,11 +37,6 @@ app.post('/submit', function(req, res) {
   };
   
   console.log(mailOptions);
-  
-});
-
-app.get('/', function(request, response) {
-  // send mail with defined transport object
   transporter.sendMail(mailOptions, function(error, info){
     console.log('Mail callback');
       if(error){
@@ -50,6 +45,11 @@ app.get('/', function(request, response) {
           console.log('Message sent: ' + info.response);
       }
   });
+});
+
+app.get('/', function(request, response) {
+  // send mail with defined transport object
+
   
   response.sendFile(__dirname + '/public/main.html');
   
