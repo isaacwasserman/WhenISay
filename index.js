@@ -28,6 +28,9 @@ app.post('/submit', function(req, res) {
   console.log(req.body);
   res.redirect('/');
   
+  var emailtext = "Someone just entered new words on whenisay.com! Adjective: " + req.body.adjective + " Noun: " + req.body.noun;
+  var emailhtml = "Someone just entered new words on whenisay.com!<br><b>Adjective: </b>" + req.body.adjective + "<br><b>Noun: </b>" + req.body.noun;
+  
   var mailOptions = {
     from: 'Fred Foo ✔ <whenisayinput@raritea.com>', // sender address
     to: 'whenisayinput@raritea.com', // list of receivers
