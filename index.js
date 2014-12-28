@@ -30,23 +30,26 @@ app.post('/submit', function(req, res) {
   
   var mailOptions = {
     from: 'Fred Foo ✔ <whenisayinput@raritea.com>', // sender address
-    to: 'whenisayinput@raritea.com', // list of receivers
+    to: 'sumworldmyworld@gmail.com', // list of receivers
     subject: 'New Input On When I Say!', // Subject line
     text: "Adjective: " + req.body.adjective + " Noun: " + req.body.noun, // plaintext body
     html: '<b>Adjective: </b>' + req.body.adjective + ' <b>Noun: </b>' + req.body.noun // html body
   };
+  
+  console.log(mailOptions);
+  
 });
 
 app.get('/', function(request, response) {
   // send mail with defined transport object
-//  transporter.sendMail(mailOptions, function(error, info){
-//    console.log('Mail callback');
-//      if(error){
-//          console.log(error);
-//      }else{
-//          console.log('Message sent: ' + info.response);
-//      }
-//  });
+  transporter.sendMail(mailOptions, function(error, info){
+    console.log('Mail callback');
+      if(error){
+          console.log(error);
+      }else{
+          console.log('Message sent: ' + info.response);
+      }
+  });
   
   response.sendFile(__dirname + '/public/main.html');
   

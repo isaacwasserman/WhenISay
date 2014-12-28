@@ -21,7 +21,7 @@
         <input class="varline" id="varline1" type="text" onblur="setquery();" name="adjective"/>
         <h1 id="line2" class="line">you say</h1>
         <input class="varline" id="varline2" type="text" onblur="setquery();" name="noun"/>
-        <input type="submit" id="read" value="Read" onclick="read();"/>
+        <input type="submit" id="read" value="Read" onclick="read();" method="post" action="/submit" type="application/x-www-form-urlencoded"/>
         <div id="share" class="bluebutton" onclick="copyurl();"><img id="shareicon" src="share.svg"/></div>
       </form>
     </div>
