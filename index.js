@@ -35,8 +35,8 @@ app.post('/submit', function(req, res) {
     from: 'Fred Foo ✔ <whenisayinput@raritea.com>', // sender address
     to: 'whenisayinput@raritea.com', // list of receivers
     subject: 'New Input On When I Say!', // Subject line
-    text: "Adjective: " + req.body.adjective + " Noun: " + req.body.noun, // plaintext body
-    html: '<b>Adjective: </b>' + req.body.adjective + ' <b>Noun: </b>' + req.body.noun // html body
+    text: emailtext, // plaintext body
+    html: emailhtml // html body
   };
   
   console.log(mailOptions);
