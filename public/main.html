@@ -8,17 +8,18 @@
     <script src="adjectivelist.js"></script>
     <script src="nounlist.js"></script>
     <script src="main.js"></script>
-    <link rel="stylesheet" media="(max-width: 1000px)" href="smallmedia.css" />
+    <link rel="stylesheet" media="(max-width: 1315px)" href="smallmedia.css" />
     <link rel="stylesheet" media="(max-width: 540px)" href="smallermedia.css" />
     <link rel="stylesheet" href="mobileprofile.css"/>
+    <link rel="icon" href="http://raritea.com/raritea/images/logo.ico" />
   </head>
   <body onload="init();">
     <div id="main">
     
     <div id="text">
       <form id="form" method="post" action="/submit" type="application/x-www-form-urlencoded">
-        <h1 id="line1" class="line"><span class="word" id="when"> </span><span id="i">I </span><span id="say1">say</span></h1>
-        <input class="varline" id="varline1" type="text" onblur="setquery();" name="adjective"/>
+        <h1 id="line1" class="line"><span class="word" id="when">When </span><span id="i">I </span><span id="say1">say</span></h1>
+        <input class="varline" id="varline1" type="text" name="adjective"/>
         <h1 id="line2" class="line">you say</h1>
         <input class="varline" id="varline2" type="text" onblur="setquery();" name="noun"/>
         <input type="submit" id="read" value="Read" onclick="read();" method="post" action="/submit" type="application/x-www-form-urlencoded"/>
@@ -28,7 +29,7 @@
     
     <div id="sidebar">
       
-      <h1 id="sidebarheading">U Said It</h1>
+      <h1 id="sidebarheading">When I Say</h1>
       <h6 id="sidebarsubheading">by <a id="raritealink" href="http://raritea.com">Raritea</a></h6>
       <div>
         <p><a id="raritealink" href="http://raritea.com/raritea/pages/Photos.html" style="text-decoration:none;">@i_wasserman</a><br>#raritea<br></p>

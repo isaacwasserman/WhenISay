@@ -4,6 +4,8 @@ body {
 
 #text {
   display: block;
+  position: absolute;
+  top: -50px;
 }
 
 h1 {
@@ -43,7 +45,7 @@ h1 {
   height: 100%;
   width: 40%;
   background-color: rgba(0,0,0,0.5);
-  display: none;
+  display: inline;
   text-align: center;
   transition: width .2s;
   }
