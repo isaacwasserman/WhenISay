@@ -168,3 +168,7 @@ p {
   position: relative;
   top: 5px;
 }
+
+#githubtag {
+  background-color: #1DAEFF;
+}
