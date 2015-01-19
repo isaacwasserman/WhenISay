@@ -29,7 +29,7 @@ app.post('/submit', function(req, res) {
   res.redirect('/');
   
   var emailtext = "Someone just entered new words on whenisay.com! Adjective: " + req.body.adjective + " Noun: " + req.body.noun;
-  var emailhtml = 'Someone just entered new words on whenisay.com!<br><span style="font-size:24px"><b>Adjective: </b></span>' + req.body.adjective + '<br><span style="font-size:24px"><b>Noun: </b></span>' + req.body.noun + '<br><br>View this WhenISay at: <a href="http://www.whenisay.com?adjective='req.body.adjective'&noun='req.body.noun'"></a>';
+  var emailhtml = 'Someone just entered new words on whenisay.com!<br><span style="font-size:24px"><b>Adjective: </b></span>' + req.body.adjective + '<br><span style="font-size:24px"><b>Noun: </b></span>' + req.body.noun + '<br><br>View this WhenISay at: <a href="http://www.whenisay.com?adjective=' + req.body.adjective + '&noun=' + req.body.noun + '"></a>';
   
   var mailOptions = {
     from: 'When I Say... <whenisayinput@raritea.com>', // sender address
