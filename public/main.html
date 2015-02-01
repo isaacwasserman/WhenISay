@@ -8,6 +8,7 @@
     <script src="adjectivelist.js"></script>
     <script src="nounlist.js"></script>
     <script src="main.js"></script>
+    <link rel="stylesheet" media="(min-width: 1315px)" href="regmedia.css" />
     <link rel="stylesheet" media="(max-width: 1315px)" href="smallmedia.css" />
     <link rel="stylesheet" media="(max-width: 540px)" href="smallermedia.css" />
     <link rel="stylesheet" href="mobileprofile.css"/>
@@ -22,7 +23,8 @@
         <input class="varline" id="varline1" type="text" name="adjective"/>
         <h1 id="line2" class="line">you say</h1>
         <input class="varline" id="varline2" type="text" onblur="setquery();" name="noun"/><br>
-        <input type="submit" id="read" value="Read" onclick="read();" method="post" action="/submit" type="application/x-www-form-urlencoded"/>
+        <input type="submit" class="bluebutton" id="read" value="Read" onclick="read();" method="post" action="/submit" type="application/x-www-form-urlencoded"/>
+        <div class="bluebutton" id="random" onclick="random();"><img src="random.png"/></div>
         <div id="share" class="bluebutton" onclick="copyurl();"><img id="shareicon" src="share.svg"/></div>
       </form>
     </div>

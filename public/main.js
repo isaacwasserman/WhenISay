@@ -1,3 +1,12 @@
+var random = function(){
+  var adjective = radjective();
+  var noun = rnoun();
+  var urlnoquery = window.location.href.substring(0, window.location.href.indexOf("?"));
+  window.location.href = urlnoquery + "?adjective=" + adjective + "&noun=" + noun;
+  settext(noun, adjective);
+  document.getElementById("isay").play();
+}
+
 var openprofile = function(){
   document.getElementById("main").style.display = "none";
   document.getElementById("mobileprofile").style.display = "inline";
@@ -36,13 +45,13 @@ var settext = function(n, a){
   }
 var init = function(){
   var words = QueryString;
-//  console.log(
   if(words['noun'] && words['adjective']){
     document.getElementById("varline1").value = words['adjective'];
     document.getElementById("varline2").value = words['noun'];
   } else {
     var adjective = radjective();
     var noun = rnoun();
+    window.location.href = window.location.href + "?adjective=" + adjective + "&noun=" + noun;
   }
   
   settext(noun, adjective);
@@ -57,7 +66,6 @@ var read = function(){
   var fullnewurl = rooturl + "?adjective=" + document.getElementById("varline1").value + "&noun=" + document.getElementById("varline2").value;
   console.log(fullnewurl);
   location.assign(fullnewurl);
-  document.getElementById("shareicon").style.display = "inline";
   }
 
 var setquery = function(){

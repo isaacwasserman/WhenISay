@@ -1,8 +1,3 @@
-#sidebar {
-  transition: width .5s;
-  width:0px;
-  z-index: -3;
-}
 
 #sidebarheading, #sidebarsubheading, p {
   font-size: 0px;
@@ -32,4 +27,8 @@
 
 .line, .varline {
   float: left;
+}
+
+#read {
+  display: none;
 }
