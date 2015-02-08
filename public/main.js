@@ -42,11 +42,13 @@ var settext = function(n, a){
   document.getElementById("varline1").setAttribute("value", a);
   document.getElementById("varline2").setAttribute("value", n);
   console.log("textset");
+  return(a + " " + n);
   }
 var init = function(){
   var words = QueryString;
   if(words['noun'] && words['adjective']){
-    document.getElementById("varline1").value = words['adjective'];
+    var adjstring = words['adjective'].replace("%20", " ");
+    document.getElementById("varline1").value = adjstring;
     document.getElementById("varline2").value = words['noun'];
   } else {
     var adjective = radjective();
@@ -59,13 +61,17 @@ var init = function(){
 }
 
 var read = function(){
-  var words = QueryString;
-  var querystart = document.URL.indexOf("?");
-  var rooturl = document.URL.substring(0, querystart);
-  document.getElementById("isay").play();
-  var fullnewurl = rooturl + "?adjective=" + document.getElementById("varline1").value + "&noun=" + document.getElementById("varline2").value;
-  console.log(fullnewurl);
-  location.assign(fullnewurl);
+  //window.location
+//  if(document.getElementById("varline1").value + " " + document.getElementById("varline2").value != settext()){
+//    document.getElementById("isay").play;
+//  }
+//  var words = QueryString;
+//  var querystart = document.URL.indexOf("?");
+//  var rooturl = document.URL.substring(0, querystart);
+//  document.getElementById("isay").play();
+//  var fullnewurl = rooturl + "?adjective=" + document.getElementById("varline1").value + "&noun=" + document.getElementById("varline2").value;
+//  console.log(fullnewurl);
+//  location.assign(fullnewurl);
   }
 
 var setquery = function(){
@@ -110,7 +116,7 @@ var playmusic = function(){
         var msg = new SpeechSynthesisUtterance(adjective);
         window.speechSynthesis.speak(msg);
         
-        setTimeout(function(){ document.getElementById("yousay").play(); }, 1500);
+        msg.onend = function(){document.getElementById("yousay").play()};
         }
       
       var repeatwords = function(){
@@ -119,6 +125,7 @@ var playmusic = function(){
         
         var msg = new SpeechSynthesisUtterance(adjective);
         window.speechSynthesis.speak(msg);
+        msg.voice = "Alex";
         var msg = new SpeechSynthesisUtterance(noun);
         window.speechSynthesis.speak(msg);
         var msg = new SpeechSynthesisUtterance(adjective);
